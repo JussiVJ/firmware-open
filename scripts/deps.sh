@@ -8,58 +8,6 @@ function msg {
 
 trap 'msg "\x1B[31mFailed to install dependencies!"' ERR
 
-if which apt-get > /dev/null
-then
-  msg "Installing system build dependencies"
-  sudo apt-get install \
-    avr-libc \
-    avrdude \
-    build-essential \
-    bison \
-    ccache \
-    curl \
-    dosfstools \
-    flashrom \
-    flex \
-    gcc-avr \
-    git-lfs \
-    gnat \
-    libncurses-dev \
-    mtools \
-    nasm \
-    parted \
-    python \
-    python3-distutils \
-    sdcc \
-    uuid-dev \
-    zlib1g-dev
-elif which dnf > /dev/null
-then
-  msg "Installing system build dependencies"
-  sudo dnf group install c-development
-  sudo dnf install \
-    avr-gcc \
-    avr-libc \
-    avrdude \
-    curl \
-    dosfstools \
-    flashrom \
-    gcc-gnat \
-    git-lfs \
-    libuuid-devel \
-    mtools \
-    nasm \
-    ncurses-devel \
-    parted \
-    patch \
-    sdcc \
-    zlib-devel
-else
-  msg "Please add support for your distribution to:"
-  msg "scripts/deps.sh"
-  exit 1
-fi
-
 msg "Installing GIT LFS hooks"
 git lfs install
 
