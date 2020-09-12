@@ -3,8 +3,11 @@ version: 2
 jobs:
   build:
     docker:
-      - image: ubuntu
-    steps:
+      - image: x86/ubuntu
+    steps: 
+      - run:
+            name: apt update
+            command: apt-get update
       - run:
             name: apt deps
             command: |
