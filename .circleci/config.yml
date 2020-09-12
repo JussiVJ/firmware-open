@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: x86/ubuntu
+      - image: amd64/ubuntu
     steps: 
       - run:
             name: apt update
