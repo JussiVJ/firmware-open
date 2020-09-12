@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: amd64/ubuntu
+      - image: ubuntu
     steps:
       - run:
             name: apt deps
