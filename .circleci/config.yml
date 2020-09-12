@@ -6,10 +6,10 @@ jobs:
       - image: amd64/ubuntu
     steps: 
       - run:
-            name: apt update
+            name: apt -y update
             command: apt-get update
       - run:
-            name: apt install
+            name: apt -y install
             command: |
               apt-get install \
                                   git \
