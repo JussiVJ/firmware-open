@@ -41,17 +41,13 @@ jobs:
             command: |
               git clone https://github.com/system76/firmware-open.git
       - run:
-            name: cd
-            command: cd firmware-open
-
-      - run:
           name: deps.sh
           command: |
-            ./firmware-open/scripts/deps.sh
+            cd firmware-open && ./scripts/deps.sh
       - run:
             name: build qemu
             command: |
-              ./firmware-open/scripts/build.sh qemu
+              cd firmware-open && ./firmware-open/scripts/build.sh qemu
 
 
 workflows:
