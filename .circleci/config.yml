@@ -8,7 +8,7 @@ jobs:
       - run:
             name: apt deps
             command: |
-              sudo apt-get install \
+              apt-get install \
                                   git \
                                   git-lfs \
                                   avr-libc \
