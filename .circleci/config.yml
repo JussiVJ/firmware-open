@@ -47,7 +47,7 @@ jobs:
       - run:
             name: build qemu
             command: |
-              cd firmware-open && ./firmware-open/scripts/build.sh qemu
+              cd firmware-open && ./scripts/build.sh qemu
 
 
 workflows:
