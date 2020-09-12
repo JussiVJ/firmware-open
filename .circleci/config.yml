@@ -1,0 +1,26 @@
+
+version: 2
+jobs:
+  build:
+    docker:
+      - image: amd64/ubuntu
+    steps:
+      - run:
+            name: git clone
+            command: |
+              git clone https://github.com/system76/firmware-setup.git
+      - run:
+          name: deps.sh
+          command: |
+            ./scripts/deps.sh
+      - run:
+            name: build qemu
+            command: |
+              ./scripts/build.sh qemu
+
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
