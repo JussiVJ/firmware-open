@@ -6,12 +6,12 @@ jobs:
       - image: amd64/ubuntu
     steps: 
       - run:
-            name: apt -y update
+            name: apt update
             command: apt-get update
       - run:
-            name: apt -y install
+            name: apt install
             command: |
-              apt-get install \
+              apt-get install -y \
                                   git \
                                   git-lfs \
                                   avr-libc \
