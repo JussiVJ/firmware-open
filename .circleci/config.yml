@@ -41,7 +41,7 @@ jobs:
             command: |
               git clone https://github.com/system76/firmware-open.git
       - run:
-          name: deps.sh
+          name: deps
           command: |
             cd firmware-open && ./scripts/deps.sh
       - run:
