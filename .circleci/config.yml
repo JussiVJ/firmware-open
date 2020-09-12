@@ -9,7 +9,7 @@ jobs:
             name: apt update
             command: apt-get update
       - run:
-            name: apt deps
+            name: apt install
             command: |
               apt-get install \
                                   git \
