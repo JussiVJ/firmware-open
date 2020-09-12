@@ -12,9 +12,9 @@ jobs:
             name: apt install
             command: |
               apt-get install -y \
+                                  sudo \
                                   git \
                                   git-lfs \
-                                  sudo \
                                   avr-libc \
                                   avrdude \
                                   build-essential \
