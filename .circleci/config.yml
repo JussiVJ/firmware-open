@@ -9,6 +9,8 @@ jobs:
             name: apt deps
             command: |
               sudo apt-get install \
+                                  git \
+                                  git-lfs \
                                   avr-libc \
                                   avrdude \
                                   build-essential \
