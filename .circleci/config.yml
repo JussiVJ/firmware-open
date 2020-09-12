@@ -43,6 +43,12 @@ jobs:
             name: cd
             command: cd firmware-open
       - run:
+            name: ls
+            command: ls
+      - run:
+            name: ls scripts
+            command: ls scripts
+      - run:
           name: deps.sh
           command: |
             ./scripts/deps.sh
