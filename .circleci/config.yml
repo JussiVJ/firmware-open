@@ -6,6 +6,31 @@ jobs:
       - image: amd64/ubuntu
     steps:
       - run:
+            name: apt deps
+            command: |
+              sudo apt-get install \
+                                  avr-libc \
+                                  avrdude \
+                                  build-essential \
+                                  bison \
+                                  ccache \
+                                  curl \
+                                  dosfstools \
+                                  flashrom \
+                                  flex \
+                                  gcc-avr \
+                                  git-lfs \
+                                  gnat \
+                                  libncurses-dev \
+                                  mtools \
+                                  nasm \
+                                  parted \
+                                  python \
+                                  python3-distutils \
+                                  sdcc \
+                                  uuid-dev \
+                                  zlib1g-dev
+      - run:
             name: git clone
             command: |
               git clone https://github.com/system76/firmware-setup.git
