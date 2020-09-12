@@ -38,9 +38,9 @@ jobs:
       - run:
             name: git clone
             command: |
-              git clone https://github.com/system76/firmware-setup.git
+              git clone https://github.com/system76/firmware-open.git
       - run:
-            name: git clone
+            name: cd
             command: cd firmware-open
       - run:
           name: deps.sh
